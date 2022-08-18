@@ -19,7 +19,7 @@ function addProduct() {
     var price = document.getElementById("price").value
     var desc = document.getElementById("desc").value
     var para = new URLSearchParams(window.location.search);
-    var id = +para.get("id");
+    var id = para.get("id");
     if (product == "") {
         alert("name is missing")
     } else if (unit == "") {
@@ -36,6 +36,7 @@ function addProduct() {
         } else {
             products = JSON.parse(localStorage.getItem("products"))
             if(id){
+            id=Number(id)
               products[id].name=document.getElementById("productname").value
               products[id].unit=document.getElementById("unit").value
               products[id].price=document.getElementById("price").value
