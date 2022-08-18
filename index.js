@@ -20,15 +20,16 @@ function addProduct() {
     var desc = document.getElementById("desc").value
     var para = new URLSearchParams(window.location.search);
     var id = para.get("id");
-    if (product == "") {
-        alert("name is missing")
-    } else if (unit == "") {
-        alert("unit is missing")
-    } else if (price == "") {
-        alert("price is missing")
-    } else if (desc == "") {
-        alert("desc is missing")
-    } else {
+    // if (product == "") {
+    //     alert("name is missing")
+    // } else if (unit == "") {
+    //     alert("unit is missing")
+    // } else if (price == "") {
+    //     alert("price is missing")
+    // } else if (desc == "") {
+    //     alert("desc is missing")
+    // } else {
+        if(product!="" & unit!="" & price!="" & desc!=""){
         let products = localStorage.getItem("products")
         if (products == null) {
             products = [new Product(product, unit, price, desc)]
@@ -47,12 +48,12 @@ function addProduct() {
             products.push(new Product(product, unit, price, desc))
             }
             localStorage.setItem("products", JSON.stringify(products));
+        
+            console.log(products);
         }
+        // window.location.href = "detailspage.html";
 
-        window.location.href = "detailspage.html";
 
-
-        console.log(products);
     }
 }
 
