@@ -1,12 +1,5 @@
 var products = localStorage.getItem("products");
-var length=products.length
-// for (index=0; index <length; index++){
-//     document.getElementById('pag').innerHTML+=`<li class="page-item"><a class="page-link" href="#">1</a></li>
-//     <li class="page-item active">
-//       <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-//     </li>`
-    
-// }
+
 
 function getDetails() {
     

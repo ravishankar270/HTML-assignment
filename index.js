@@ -35,7 +35,7 @@ function addProduct() {
             localStorage.setItem("products", JSON.stringify(products));
         } else {
             products = JSON.parse(localStorage.getItem("products"))
-            if(id!=null){
+            if(id){
               products[id].name=document.getElementById("productname").value
               products[id].unit=document.getElementById("unit").value
               products[id].price=document.getElementById("price").value
